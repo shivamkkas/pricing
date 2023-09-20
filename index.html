@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pricing</title>
+</head>
+
+<body>
+    <header>
+        <h1>unbox</h1>
+        <a><i></i></a>
+        <ul>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+
+
+    </header>
+    <div>
+        <h1 class="head">Choose the best plan for your business</h1>
+        <div class="main">
+            <div class="mdiv1">
+                <button id="button1" onclick="myfunction()">Individuals and Teams</button>
+                <button id="button2" onclick="myfunction2()">Business Plans</button>
+
+            </div>
+
+
+        </div>
+        <div class="main2">
+            <button onclick="slide1()" id="month">Monthly</button>
+            <div class="toggle" onclick="toggleme()"></div>
+
+            <button onclick="slide2()" id="year">Annually</button><br>
+            <span class="span">"(Save"
+                <span>20%</span>
+                "*)"
+            </span>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="pricing-card">
+            <div>
+                <h2 id="head1">Individual</h2>
+            </div>
+            <div>
+                <div>
+                    <span class="before"><del id="price1"></del></span>
+                    <span class="after" id="price2">FREE</span>
+                </div>
+
+                <div class="price">
+                    <p id="para1">Single user</p>
+
+                </div>
+                <div>
+                    <button class="btn1">Buy Now</button>
+
+
+                </div>
+                <div><button class="btn2">Try It</button></div>
+
+                <div>
+                    <p id="para2">Secure file storage, sharing and native e-signatures for personal use</p>
+
+                </div>
+                <div class="features">
+                    <p>10 GB of storage</p>
+                    <p>250 MB file upload limit</p>
+                    <p>1 file version</p>
+                </div>
+            </div>
+        </div>
+        <div class="pricing-card">
+            <h2 id="head2">Personal Pro</h2>
+
+            <div>
+                <div>
+                    <span class="before"><del id="price3"></del></span>
+                    <span class="after" id="price4">₹1,050</span>
+                </div>
+
+                <div class="price">
+                    <p id="para3">per month paid annually
+                        single user</p>
+                </div>
+                <div class="btn">
+                    <button class="btn1">Buy Now</button>
+
+
+                </div>
+                <div>
+                    <button class="btn2">Try It</button>
+
+                </div>
+                <div>
+                    <p id="para4">Upgrade your personal plan for more flexibility, storage and e-signatures</p>
+
+                </div>
+                <div class="features">
+                    <p>100 GB of storage</p>
+                    <p>5 GB file upload</p>
+                    <p>10 file versions</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="pricing-card">
+            <h2 id="head3">Enterprise
+            </h2>
+            <div>
+                <div>
+                    <span class="before"><del id="price5"></del></span>
+                    <span class="after" id="price6">₹550</span>
+                </div>
+
+                <div class="price">
+                    <p id="para5">per user/month paid annually
+                        minimum of 3 users</p>
+                </div>
+                <div>
+                    <button class="btn1">Buy Now</button>
+
+
+                </div>
+                <div> <button class="btn2">Try It</button></div>
+                <div>
+                    <p>Secure file collaboration, storage and native e-signatures for up to 10 users</p>
+                </div>
+                <div class="features">
+
+                    <p>100 GB of storage</p>
+                    <p>2 GB file upload</p>
+                    <p>25 file versions</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        let y = false;
+        function myfunction() {
+            document.getElementById("button1").style.backgroundColor = "#2196F3";
+            document.getElementById("button2").style.backgroundColor = "white";
+            document.getElementById("head1").innerHTML = "Individual";
+            document.getElementById("head2").innerHTML = "Personal Pro";
+            document.getElementById("head3").innerHTML = "Starter";
+            document.getElementById("para2").innerHTML = "Secure file storage, sharing and native e-signatures for personal use";
+            document.getElementById("para4").innerHTML = "Upgrade your personal plan for more flexibility, storage and e-signatures";
+            document.getElementById("para6").innerHTML = "Secure file collaboration, storage and native e-signatures for up to 10 users";
+            document.getElementById("para1").innerHTML = "Single user";
+            document.getElementById("para3").innerHTML = "per month paid annually single user";
+            document.getElementById("para5").innerHTML = "per user/month paid annually minimum of 3 users";
+            y=true;
+
+
+
+
+
+        }
+        function myfunction2() {
+            document.getElementById("button2").style.backgroundColor = "#2196F3";
+            document.getElementById("button1").style.backgroundColor = "white";
+            document.getElementById("head1").innerHTML = "Business";
+            document.getElementById("head2").innerHTML = "Business Plus";
+            document.getElementById("head3").innerHTML = "Enterprise";
+            document.getElementById("para2").innerHTML = "Team collaboration for any business";
+            document.getElementById("para4").innerHTML = "Content management for your entire organization";
+            document.getElementById("para6").innerHTML = "Advanced content management and data protection";
+            document.getElementById("para1").innerHTML = "per user/month paid annually minimum of 3 users";
+            document.getElementById("para3").innerHTML = "per user/month paid annually minimum of 3 users";
+            document.getElementById("para5").innerHTML = "per user/month paid annually minimum of 3 users";
+            y=false;
+
+
+
+        }
+
+
+        const toggle = document.querySelector('.toggle');
+
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('on');
+        });
+        if (y) {
+
+            let x = false;
+            function toggleme() {
+                if (x) {
+                    document.getElementById("price1").innerHTML = "₹1,545  "
+                    document.getElementById("price2").innerHTML = " "
+                    document.getElementById("price3").innerHTML = " "
+                    document.getElementById("price5").innerHTML = " "
+                    document.getElementById("price4").innerHTML = "₹2,635  "
+                    document.getElementById("price6").innerHTML = "₹3,635 "
+                    x = false;
+                }
+                else {
+                    document.getElementById("price3").innerHTML = "₹1,545"
+                    document.getElementById("price4").innerHTML = "₹1,160"
+                    document.getElementById("price3").innerHTML = "₹2,635 "
+                    document.getElementById("price4").innerHTML = "₹₹1,980"
+                    document.getElementById("price5").innerHTML = "₹3,635  "
+                    document.getElementById("price6").innerHTML = "₹2,730"
+                    x = true;
+                }
+            }
+        }
+        if(y!=true){
+
+                let x = false;
+                function toggleme() {
+                    if (x) {
+                        document.getElementById("price3").innerHTML = " "
+                        document.getElementById("price5").innerHTML = " "
+                        document.getElementById("price4").innerHTML = "₹1,050  "
+                        document.getElementById("price6").innerHTML = "₹550 "
+                        x = false;
+                    }
+                    else {
+                        document.getElementById("price3").innerHTML = "₹1,050  "
+                        document.getElementById("price4").innerHTML = "₹785 "
+                        document.getElementById("price5").innerHTML = "₹550 "
+                        document.getElementById("price6").innerHTML = "₹410"
+                        x = true;
+                    }
+
+                }
+            }
+        
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
